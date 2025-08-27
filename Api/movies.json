@@ -1,0 +1,142 @@
+[
+  {
+    "Id": 1,
+    "Title": "The Shawshank Redemption",
+    "Genre": "Drama",
+    "Year": 1994,
+    "Director": "Frank Darabont"
+  },
+  {
+    "Id": 2,
+    "Title": "The Godfather",
+    "Genre": "Crime",
+    "Year": 1972,
+    "Director": "Francis Ford Coppola"
+  },
+  {
+    "Id": 3,
+    "Title": "The Dark Knight",
+    "Genre": "Action",
+    "Year": 2008,
+    "Director": "Christopher Nolan"
+  },
+  {
+    "Id": 4,
+    "Title": "Pulp Fiction",
+    "Genre": "Crime",
+    "Year": 1994,
+    "Director": "Quentin Tarantino"
+  },
+  {
+    "Id": 5,
+    "Title": "Forrest Gump",
+    "Genre": "Drama",
+    "Year": 1994,
+    "Director": "Robert Zemeckis"
+  },
+  {
+    "Id": 6,
+    "Title": "Inception",
+    "Genre": "Sci-Fi",
+    "Year": 2010,
+    "Director": "Christopher Nolan"
+  },
+  {
+    "Id": 7,
+    "Title": "Fight Club",
+    "Genre": "Drama",
+    "Year": 1999,
+    "Director": "David Fincher"
+  },
+  {
+    "Id": 8,
+    "Title": "The Matrix",
+    "Genre": "Sci-Fi",
+    "Year": 1999,
+    "Director": "Lana & Lilly Wachowski"
+  },
+  {
+    "Id": 9,
+    "Title": "Goodfellas",
+    "Genre": "Crime",
+    "Year": 1990,
+    "Director": "Martin Scorsese"
+  },
+  {
+    "Id": 10,
+    "Title": "Se7en",
+    "Genre": "Thriller",
+    "Year": 1995,
+    "Director": "David Fincher"
+  },
+  {
+    "Id": 11,
+    "Title": "Interstellar",
+    "Genre": "Sci-Fi",
+    "Year": 2014,
+    "Director": "Christopher Nolan"
+  },
+  {
+    "Id": 12,
+    "Title": "The Silence of the Lambs",
+    "Genre": "Thriller",
+    "Year": 1991,
+    "Director": "Jonathan Demme"
+  },
+  {
+    "Id": 13,
+    "Title": "Saving Private Ryan",
+    "Genre": "War",
+    "Year": 1998,
+    "Director": "Steven Spielberg"
+  },
+  {
+    "Id": 14,
+    "Title": "Gladiator",
+    "Genre": "Action",
+    "Year": 2000,
+    "Director": "Ridley Scott"
+  },
+  {
+    "Id": 15,
+    "Title": "The Green Mile",
+    "Genre": "Drama",
+    "Year": 1999,
+    "Director": "Frank Darabont"
+  },
+  {
+    "Id": 16,
+    "Title": "Titanic",
+    "Genre": "Romance",
+    "Year": 1997,
+    "Director": "James Cameron"
+  },
+  {
+    "Id": 17,
+    "Title": "The Departed",
+    "Genre": "Crime",
+    "Year": 2006,
+    "Director": "Martin Scorsese"
+  },
+  {
+    "Id": 18,
+    "Title": "Whiplash",
+    "Genre": "Drama",
+    "Year": 2014,
+    "Director": "Damien Chazelle"
+  },
+  {
+    "Id": 19,
+    "Title": "The Prestige",
+    "Genre": "Drama",
+    "Year": 2006,
+    "Director": "Christopher Nolan"
+  },
+  {
+    "Id": 20,
+    "Title": "The Lion King",
+    "Genre": "Animation",
+    "Year": 1994,
+    "Director": "Roger Allers & Rob Minkoff"
+  }
+]
