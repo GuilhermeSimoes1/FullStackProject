@@ -33,7 +33,8 @@ namespace Api.Controllers
                 Title = m.Title,
                 Genre = m.Genre,
                 Year = m.Year,
-                Director = m.Director
+                Director = m.Director,
+                ImageUrl = m.ImageUrl
             }).ToList();
         }
 
@@ -53,7 +54,8 @@ namespace Api.Controllers
                 Title = movie.Title,
                 Genre = movie.Genre,
                 Year = movie.Year,
-                Director = movie.Director
+                Director = movie.Director,
+                ImageUrl = movie.ImageUrl
             };
 
             return dto;
@@ -102,6 +104,24 @@ namespace Api.Controllers
                 Year = dto.Year,
                 Director = dto.Director
             };
+
+            if(dto.Image != null && dto.Image.Length > 0) 
+            
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/movies");
+                Directory.CreateDirectory(uploadsFolder);
+                
+                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(dto.Image.FileName);
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await dto.Image.CopyToAsync(stream);
+                }
+
+                // Guarda a URL relativa
+                movie.ImageUrl = $"/images/movies/{uniqueFileName}";
+            }
 
             _context.Movies.Add(movie);
             await _context.SaveChangesAsync();
