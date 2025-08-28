@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Api.Data;
 using Api.Models;
+using Api.Dtos;
 
 namespace Api.Controllers
 {
@@ -23,14 +24,22 @@ namespace Api.Controllers
 
         // GET: api/Movies
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovies()
         {
-            return await _context.Movies.ToListAsync();
+            var movies = await _context.Movies.ToListAsync();
+
+            return movies.Select(m => new MovieDto
+            {
+                Title = m.Title,
+                Genre = m.Genre,
+                Year = m.Year,
+                Director = m.Director
+            }).ToList();
         }
 
         // GET: api/Movies/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Movie>> GetMovie(int id)
+        public async Task<ActionResult<MovieDto>> GetMovie(int id)
         {
             var movie = await _context.Movies.FindAsync(id);
 
@@ -39,7 +48,15 @@ namespace Api.Controllers
                 return NotFound();
             }
 
-            return movie;
+            var dto = new MovieDto
+            {
+                Title = movie.Title,
+                Genre = movie.Genre,
+                Year = movie.Year,
+                Director = movie.Director
+            };
+
+            return dto;
         }
 
         // PUT: api/Movies/5
@@ -76,12 +93,28 @@ namespace Api.Controllers
         // POST: api/Movies
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Movie>> PostMovie(Movie movie)
+        public async Task<ActionResult<MovieDto>> PostMovie(CreateMovieDto dto)
         {
+            var movie = new Movie
+            {
+                Title = dto.Title,
+                Genre = dto.Genre,
+                Year = dto.Year,
+                Director = dto.Director
+            };
+
             _context.Movies.Add(movie);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMovie", new { id = movie.Id }, movie);
+            var result = new MovieDto
+            {
+                Title = movie.Title,
+                Genre = movie.Genre,
+                Year = movie.Year,
+                Director = dto.Director
+            };
+
+            return CreatedAtAction(nameof(GetMovies), new {id = movie.Id}, result);
         }
 
         // DELETE: api/Movies/5
