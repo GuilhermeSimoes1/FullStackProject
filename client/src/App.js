@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Navbar from "./components/navbar";
+import MoviesList from "./components/moviesList";
 
 function App() {
 
@@ -19,15 +21,8 @@ function App() {
 
   return (
     <div>
-      <h1>Lista de Filmes</h1>
-      <ul>
-        {movies.map((movie, index) => (
-        <li key={index}> 
-          {JSON.stringify(movie)}
-        </li>
-        )
-        )}  
-      </ul>
+      <Navbar />
+      <MoviesList movies={movies} />
     </div>
 
   );
