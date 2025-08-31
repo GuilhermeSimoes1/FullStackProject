@@ -2,7 +2,7 @@ import Card from "./card";
 
 function MoviesList({movies}) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-20 gap-y-14" style={{ marginTop: '40px' }}>
       {movies.map(movie => (
         <Card 
           key={movie.id}

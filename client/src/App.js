@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./components/navbar";
-import MoviesList from "./components/moviesList";
+import MoviesPage from "./pages/MoviesPage";
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <MoviesList movies={movies} />
+      <MoviesPage movies={movies} />
     </div>
 
   );
