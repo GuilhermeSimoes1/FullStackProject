@@ -3,6 +3,11 @@
     public class CreateMovieDto
     {
         /// <summary>
+        /// Identifier of the movie
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// Title of the movie
         /// </summary>
         public string Title { get; set; } = "";

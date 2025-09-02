@@ -2,6 +2,7 @@
 {
     public class MovieDto
     {
+
         /// <summary>
         /// Identifier of the movie
         /// </summary>
