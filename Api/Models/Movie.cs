@@ -32,6 +32,11 @@
         /// </summary>
         public string? ImageUrl { get; set; } = "";
 
+        /// <summary>
+        /// Description of the movie
+        /// </summary>
+        public string Description { get; set; } = "";
+
 
     }
 }

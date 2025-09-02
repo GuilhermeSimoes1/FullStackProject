@@ -3,6 +3,11 @@
     public class MovieDto
     {
         /// <summary>
+        /// Identifier of the movie
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// Title of the movie
         /// </summary>
         public string Title { get; set; } = "";
@@ -26,5 +31,10 @@
         /// Path of the image
         /// </summary>
         public string? ImageUrl { get; set; } = "";
+
+        /// <summary>
+        /// Description of the movie
+        /// </summary>
+        public string Description { get; set; } = "";
     }
 }

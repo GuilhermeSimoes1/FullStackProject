@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250827214650_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250902112929_Reset")]
+    partial class Reset
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,12 +32,19 @@ namespace Api.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Director")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Genre")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

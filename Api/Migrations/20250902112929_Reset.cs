@@ -5,7 +5,7 @@
 namespace Api.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Reset : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +19,9 @@ namespace Api.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Genre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Year = table.Column<int>(type: "int", nullable: false),
-                    Director = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Director = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

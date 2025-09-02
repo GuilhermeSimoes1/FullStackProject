@@ -26,5 +26,10 @@
         /// Cover image of the movie
         /// </summary>
         public IFormFile? Image { get; set; }
+
+        /// <summary>
+        /// Description of the movie
+        /// </summary>
+        public string Description { get; set; } = "";
     }
 }

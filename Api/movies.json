@@ -3,120 +3,168 @@
     "Title": "The Shawshank Redemption",
     "Genre": "Drama",
     "Year": 1994,
-    "Director": "Frank Darabont"
-  },
-  {
-    "Title": "The Godfather",
-    "Genre": "Crime",
-    "Year": 1972,
-    "Director": "Francis Ford Coppola"
-  },
-  {
-    "Title": "The Dark Knight",
-    "Genre": "Action",
-    "Year": 2008,
-    "Director": "Christopher Nolan"
-  },
-  {
-    "Title": "Pulp Fiction",
-    "Genre": "Crime",
-    "Year": 1994,
-    "Director": "Quentin Tarantino"
-  },
-  {
-    "Title": "Forrest Gump",
-    "Genre": "Drama",
-    "Year": 1994,
-    "Director": "Robert Zemeckis"
+    "Director": "Frank Darabont",
+    "ImageUrl": "/images/movies/dde5084e-76ce-4e54-b437-3f7b5fa53cfd.png",
+    "Description": "A banker is wrongly imprisoned for murder and forms a lasting friendship while maintaining hope and dignity through decades in Shawshank State Penitentiary."
   },
   {
     "Title": "Inception",
     "Genre": "Sci-Fi",
     "Year": 2010,
-    "Director": "Christopher Nolan"
+    "Director": "Christopher Nolan",
+    "ImageUrl": "/images/movies/bea51460-8b11-461a-8725-f1fe82f4ffa5.jpg",
+    "Description": "A skilled thief enters people's dreams to steal secrets, but is challenged with planting an idea that could change everything."
   },
   {
-    "Title": "Fight Club",
-    "Genre": "Drama",
-    "Year": 1999,
-    "Director": "David Fincher"
-  },
-  {
-    "Title": "The Matrix",
-    "Genre": "Sci-Fi",
-    "Year": 1999,
-    "Director": "Lana & Lilly Wachowski"
-  },
-  {
-    "Title": "Goodfellas",
+    "Title": "The Godfather",
     "Genre": "Crime",
-    "Year": 1990,
-    "Director": "Martin Scorsese"
+    "Year": 1972,
+    "Director": "Francis Ford Coppola",
+    "ImageUrl": "/images/movies/2e5327fd-3aab-4df2-9110-ecdc44ab0596.jpg",
+    "Description": "The aging patriarch of a crime dynasty transfers control of his empire to his reluctant son, exploring loyalty, power, and family."
   },
   {
-    "Title": "Se7en",
-    "Genre": "Thriller",
-    "Year": 1995,
-    "Director": "David Fincher"
+    "Title": "The Dark Knight",
+    "Genre": "Action",
+    "Year": 2008,
+    "Director": "Christopher Nolan",
+    "ImageUrl": "/images/movies/5b75e160-f105-4bcf-857e-86610adf3fc6.jpg",
+    "Description": "Batman faces the Joker, a criminal mastermind who threatens Gotham City, testing the hero's limits and moral code."
   },
   {
     "Title": "Interstellar",
     "Genre": "Sci-Fi",
     "Year": 2014,
-    "Director": "Christopher Nolan"
+    "Director": "Christopher Nolan",
+    "ImageUrl": "/images/movies/b46bd72a-0085-4bbf-984f-805468b348b4.png",
+    "Description": "A team of explorers travels through a wormhole in search of a new home for humanity as Earth faces environmental collapse."
+  },
+  {
+    "Title": "The Grand Budapest Hotel",
+    "Genre": "Comedy/Drama",
+    "Year": 2014,
+    "Director": "Wes Anderson",
+    "ImageUrl": "/images/movies/2e8e665d-79e8-45b3-b587-5688377262c6.png",
+    "Description": "The adventures of a legendary concierge and his protégé unfold in a luxurious European hotel between the wars."
+  },
+  {
+    "Title": "Pulp Fiction",
+    "Genre": "Crime",
+    "Year": 1994,
+    "Director": "Quentin Tarantino",
+    "ImageUrl": "",
+    "Description": "Interconnected stories of crime, redemption, and dark humor collide in Los Angeles, blending violence with unforgettable dialogue."
+  },
+  {
+    "Title": "Forrest Gump",
+    "Genre": "Drama",
+    "Year": 1994,
+    "Director": "Robert Zemeckis",
+    "ImageUrl": "",
+    "Description": "Forrest Gump, a man of simple mind but big heart, witnesses and influences historical events while searching for love and purpose."
+  },
+  {
+    "Title": "Fight Club",
+    "Genre": "Drama",
+    "Year": 1999,
+    "Director": "David Fincher",
+    "ImageUrl": "",
+    "Description": "An insomniac office worker forms an underground fight club with a soap salesman, spiraling into chaos and self-discovery."
+  },
+  {
+    "Title": "The Matrix",
+    "Genre": "Sci-Fi",
+    "Year": 1999,
+    "Director": "Lana & Lilly Wachowski",
+    "ImageUrl": "",
+    "Description": "A hacker discovers the reality he knows is a simulation and joins a rebellion to free humanity from the machines."
+  },
+  {
+    "Title": "Goodfellas",
+    "Genre": "Crime",
+    "Year": 1990,
+    "Director": "Martin Scorsese",
+    "ImageUrl": "",
+    "Description": "The rise and fall of Henry Hill in the mafia world exposes loyalty, betrayal, and the costs of a life of crime."
+  },
+  {
+    "Title": "Se7en",
+    "Genre": "Thriller",
+    "Year": 1995,
+    "Director": "David Fincher",
+    "ImageUrl": "",
+    "Description": "Two detectives hunt a serial killer who uses the seven deadly sins as a motif for his gruesome crimes."
   },
   {
     "Title": "The Silence of the Lambs",
     "Genre": "Thriller",
     "Year": 1991,
-    "Director": "Jonathan Demme"
+    "Director": "Jonathan Demme",
+    "ImageUrl": "",
+    "Description": "A young FBI cadet seeks the help of imprisoned cannibal Hannibal Lecter to catch another serial killer."
   },
   {
     "Title": "Saving Private Ryan",
     "Genre": "War",
     "Year": 1998,
-    "Director": "Steven Spielberg"
+    "Director": "Steven Spielberg",
+    "ImageUrl": "",
+    "Description": "During World War II, soldiers risk everything to find and bring home a paratrooper whose brothers have been killed in action."
   },
   {
     "Title": "Gladiator",
     "Genre": "Action",
     "Year": 2000,
-    "Director": "Ridley Scott"
+    "Director": "Ridley Scott",
+    "ImageUrl": "",
+    "Description": "A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family and destroyed his life."
   },
   {
     "Title": "The Green Mile",
     "Genre": "Drama",
     "Year": 1999,
-    "Director": "Frank Darabont"
+    "Director": "Frank Darabont",
+    "ImageUrl": "",
+    "Description": "A death row prison guard witnesses supernatural events surrounding a gentle giant with extraordinary healing powers."
   },
   {
     "Title": "Titanic",
     "Genre": "Romance",
     "Year": 1997,
-    "Director": "James Cameron"
+    "Director": "James Cameron",
+    "ImageUrl": "",
+    "Description": "A young couple falls in love aboard the doomed RMS Titanic, facing tragedy and enduring love against all odds."
   },
   {
     "Title": "The Departed",
     "Genre": "Crime",
     "Year": 2006,
-    "Director": "Martin Scorsese"
+    "Director": "Martin Scorsese",
+    "ImageUrl": "",
+    "Description": "An undercover cop and a mole in the police force try to identify each other while infiltrating a Boston crime syndicate."
   },
   {
     "Title": "Whiplash",
     "Genre": "Drama",
     "Year": 2014,
-    "Director": "Damien Chazelle"
+    "Director": "Damien Chazelle",
+    "ImageUrl": "",
+    "Description": "A young drummer strives for greatness under a ruthless music instructor, testing the limits of ambition and obsession."
   },
   {
     "Title": "The Prestige",
     "Genre": "Drama",
     "Year": 2006,
-    "Director": "Christopher Nolan"
+    "Director": "Christopher Nolan",
+    "ImageUrl": "",
+    "Description": "Two magicians engage in a fierce rivalry, pushing the boundaries of obsession, deception, and sacrifice."
   },
   {
     "Title": "The Lion King",
     "Genre": "Animation",
     "Year": 1994,
-    "Director": "Roger Allers & Rob Minkoff"
+    "Director": "Roger Allers & Rob Minkoff",
+    "ImageUrl": "",
+    "Description": "A lion prince flees his kingdom after the murder of his father, then grows to reclaim his throne and embrace his destiny."
   }
 ]
