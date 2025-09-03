@@ -30,11 +30,13 @@ namespace Api.Controllers
 
             return movies.Select(m => new MovieDto
             {
+                Id = m.Id,
                 Title = m.Title,
                 Genre = m.Genre,
                 Year = m.Year,
                 Director = m.Director,
-                ImageUrl = m.ImageUrl
+                ImageUrl = m.ImageUrl,
+                Description = m.Description
             }).ToList();
         }
 
@@ -51,11 +53,13 @@ namespace Api.Controllers
 
             var dto = new MovieDto
             {
+                Id = movie.Id,
                 Title = movie.Title,
                 Genre = movie.Genre,
                 Year = movie.Year,
                 Director = movie.Director,
-                ImageUrl = movie.ImageUrl
+                ImageUrl = movie.ImageUrl,
+                Description = movie.Description
             };
 
             return dto;
@@ -99,18 +103,20 @@ namespace Api.Controllers
         {
             var movie = new Movie
             {
+                Id = dto.Id,
                 Title = dto.Title,
                 Genre = dto.Genre,
                 Year = dto.Year,
-                Director = dto.Director
+                Director = dto.Director,
+                Description = dto.Description
             };
 
-            if(dto.Image != null && dto.Image.Length > 0) 
-            
+            if (dto.Image != null && dto.Image.Length > 0)
+
             {
                 var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/movies");
                 Directory.CreateDirectory(uploadsFolder);
-                
+
                 var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(dto.Image.FileName);
                 var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
