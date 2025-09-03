@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+
+  const navigate = useNavigate();
+  const handleClickMovies = () => {
+    navigate(`/movies`);  
+  }
+
   return (
     <nav className="relative bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -32,18 +39,19 @@ function Navbar() {
           </div>
 
           {/* Logo + links */}
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
               <img
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
+                onClick={handleClickMovies}
+                src="/popcorn.png"
+                alt="FullStackProject"
                 className="h-8 w-auto"
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  onClick={handleClickMovies}
                   className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
                 >
                   Movies
