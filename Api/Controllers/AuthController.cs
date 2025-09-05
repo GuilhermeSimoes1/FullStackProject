@@ -72,7 +72,7 @@ public class AuthController : ControllerBase
 
             if (!PasswordHasher.VerifyPassword(dto.Password, user.PasswordHash))
             {
-                return Unauthorized("Password is incorrect")´;
+                return Unauthorized("Password is incorrect");
             }
 
             var claims = new[]
@@ -87,6 +87,7 @@ public class AuthController : ControllerBase
             var jwtKey = _config["Jwt:Key"] ?? throw new Exception("JWT Key not defined");
             var issuer = _config["Jwt:Issuer"];
             var audience = _config["Jwt:Audience"];
+            var expires = _config["Jwt:ExpireHours"];
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
@@ -94,7 +95,7 @@ public class AuthController : ControllerBase
                 issuer: issuer,
                 audience: audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(2),
+                expires: DateTime.UtcNow.AddHours(double.Parse(expires)),
                 signingCredentials: creds
             ); 
             
