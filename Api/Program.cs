@@ -1,5 +1,10 @@
 using Api.Data;
+using Jose;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +30,29 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// JWT
+var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new Exception("JWT Key não definida");
+var issuer = builder.Configuration["Jwt:Issuer"] ?? throw new Exception("JWT Issuer não definida");
+var audience = builder.Configuration["Jwt:Audience"] ?? throw new Exception("JWT Audience não definida");
+var expireHours = int.Parse(builder.Configuration["Jwt:ExpireHours"] ?? "2");
+
+var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(o =>
+    {
+        o.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = key,
+            ValidateIssuer = true,
+            ValidIssuer = issuer,
+            ValidateAudience = true,
+            ValidAudience = audience,
+            ValidateLifetime = true
+        };
+    });
 
 var app = builder.Build();
 
